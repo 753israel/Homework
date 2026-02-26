@@ -66,3 +66,75 @@
 # student1.add_score(80)
 # student1.add_score(99)
 # print(student1.avg_score())
+
+
+#6
+#צור מחלקה  עם פונקציה שמחזירה שטח והיקף.   Rectangle
+# class Rectangle:
+#     def __init__(self,width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def area(self):
+#         return self.width * self.height
+#
+#     def scope(self):
+#         return 2 * (self.width + self.height)
+#
+#     def __str__(self):
+#         return f'Rectangle width is:{self.width}, height is:{self.height}'
+#
+# r1 = Rectangle(5,5)
+# print(r1.scope())
+# print(r1.area())
+# print(r1)
+
+#7
+#צור מחלקה  וממנה ירושה  ו־. Animal , Cat,Dog
+# class Animal:
+#     def __init__(self,name,age,color,voice):
+#         self.name = name
+#         self.age = age
+#         self.color = color
+#         self.voice = voice
+#
+#     def make_sound(self):
+#         return f'The voice is : {self.voice}'
+#
+#     def __str__(self):
+#         return (f'Name: {self.name} ,'
+#                 f'Age: {self.age}'
+#                 f'Color: {self.color}')
+#
+#
+# class Cat(Animal):
+#     def __init__(self, name, age, color, voice):
+#         super().__init__(name, age, color,voice)
+#
+#
+#     def make_sound(self):
+#         self.voice = "Meow"
+#         return f'The voice is : {self.voice}'
+#
+#     def __str__(self):
+#         return f'{super().__str__()}'
+#
+#
+# class Dog(Animal):
+#     def __init__(self,name,age,color,voice):
+#         super().__init__(name,age,color,voice)
+#     def make_sound(self):
+#         self.voice = "Auu"
+#         return  f'The voice is : {self.voice}'
+#
+#     def __str__(self):
+#         return f'{super().__str__()}'
+#
+# c = Cat("Mizi", 3, "White", "Meow")
+# d = Dog("Rex", 5, "Brown", "Auu")
+#
+# print(c.make_sound())  # Meow
+# print(d.make_sound())  # Auu
+#
+# print(c)
+# print(d)
