@@ -75,3 +75,22 @@
 # num = [10,7,3,1]
 # print(sort_list(num))
 
+
+#5
+#תוב פונקציה שמקבלת מספר ומחזירה את כל הצירופים האפשריים של ספרותיו.
+# def addb(d):
+#     d = str(d)  # הופך למחרוזת
+#     if len(d) == 1:
+#         return [d]
+#
+#     result = []
+#     for i in range(len(d)):
+#         for perm in addb(d[:i] + d[i+1:]):
+#             result.append(d[i] + perm)
+#
+#     return result
+#
+#
+#
+# num = int(input("enter a number:"))
+# print(addb(num))
