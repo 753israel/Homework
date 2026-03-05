@@ -74,3 +74,65 @@
 #         li[i] = 1
 #
 # print(li)
+
+#6
+#מציאת המספר הגדול ביותר ברשימה
+#קבל רשימה של מספרים מהמשתמש (למשל: 1,9,2,5), והחזר את המספר הגדול ביותר — בלי להשתמש ב־()max.
+# num = [1,9,2,5]
+# max = num[0]
+# for i in num:
+#     if max < i:
+#         max = i
+# print(max)
+
+#7
+#כתיבה וקריאה של קובץ — גרסה מתקדמת
+#כתוב קוד שפותח קובץ, כותב לתוכו 5 מספרים (כל אחד בשורה), ואז קורא את הקובץ ומחשב את סכום המספרים.
+# פתיחת קובץ לכתיבה
+# file = open("numbers.txt", "w", encoding="utf-8")
+#
+# # כתיבת 5 מספרים, כל אחד בשורה
+# file.write("1\n")
+# file.write("2\n")
+# file.write("3\n")
+# file.write("4\n")
+# file.write("5\n")
+#
+# # סגירת הקובץ
+# file.close()
+#
+# # פתיחת הקובץ לקריאה
+# file = open("numbers.txt", "r", encoding="utf-8")
+#
+# # קריאת כל השורות
+# lines = file.readlines()
+#
+# # סגירת הקובץ
+# file.close()
+#
+# # חישוב סכום המספרים
+# total = 0
+# for line in lines:
+#     total += int(line.strip())
+#
+# print("The sum is:", total)
+
+# #עוד דרך
+# # כתיבה לקובץ
+# with open("numbers.txt", "w", encoding="utf-8") as file:
+#     file.write("1\n")
+#     file.write("2\n")
+#     file.write("3\n")
+#     file.write("4\n")
+#     file.write("5\n")
+#
+# # קריאה מהקובץ
+# with open("numbers.txt", "r", encoding="utf-8") as file:
+#     lines = file.readlines()
+#
+# # חישוב סכום המספרים
+# total = 0
+# for line in lines:
+#     total += int(line.strip())
+#
+# print("The sum is:", total)
