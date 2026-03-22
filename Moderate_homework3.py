@@ -123,11 +123,7 @@
 #             new_list_end_a.append(word)
 #     return new_list_end_a
 
-
-
-
-
-list_word = ["pasta", "dog", "pizza", "cola", "tree"]
-print(new_list(list_word))
+# list_word = ["pasta", "dog", "pizza", "cola", "tree"]
+# print(new_list(list_word))
 
 
