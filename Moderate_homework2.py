@@ -136,3 +136,18 @@
 #     total += int(line.strip())
 #
 # print("The sum is:", total)
+
+#8
+# ספירת תדירויות
+#כתוב פונקציה שמקבלת מחרוזת ומחזירה מילון שבו כל תו הוא מפתח, והערך הוא מספר הפעמים שהוא מופיע.
+# def dic_liter(s):
+#     f = {}
+#     for char in s:
+#         if char in f:
+#             f[char] += 1
+#         else:
+#             f[char] = 1
+#     return f
+#
+# n = input("enter a word: ")
+# print(dic_liter(n))

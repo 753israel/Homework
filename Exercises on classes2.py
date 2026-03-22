@@ -99,3 +99,5 @@
 # emp1 = Employee("israel",50,180)
 # emp1.monthly_salary()
 # print(emp1)
+
+
