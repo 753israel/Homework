@@ -52,5 +52,42 @@
 #
 # print(average(10,20,30))
 
+#5
+#בדיקת פלינדרום: כתוב פונקציה שבודקת אם מחרוזת היא פלינדרום (נקראת אותו דבר מהסוף להתחלה), תוך התעלמות מרווחים ואותיות גדולות/קטנות.
+#זה פלינדרום רגיל
+# def pal(s):
+#     t = s[::-1]
+#     if t == s:
+#         return True
+#     return False
+# # זה לפי השאלה
+# def pal1(s):
+#     s = s.replace(" ", "").lower()
+#     return s == s[::-1]
+#
+#
+# text = input("enter a pal:")
+# print(pal(text))
+# # Bab (False)
+# text1 = input("enter a pal:")
+# print(pal1(text))
+# # Bab(True)
+
+#6
+#ניהול קבצים: כתוב סקריפט שפותח קובץ טקסט בשם data.txt, קורא את כל השורות בו, ומדפיס רק את השורות שמתחילות במילה "Python".
+
+# text = open("data.txt","r")
+# row = text.readlines()
+# for i in row:
+#     if i.startswith("Python"):
+#         print(i, end="")
+# print()
+#
+# with open("data.txt", "r") as text:
+#     for line in text:
+#         if line.startswith("Python"):
+#             print(line, end="")
+
+
 
 
