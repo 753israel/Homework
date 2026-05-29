@@ -135,3 +135,70 @@
 # print(acc.get_balance())   # 550
 #
 # print(acc)
+#####################################################################
+#6
+#מחלקה Book
+# class Book:
+#     def __init__(self, title, author, year, is_borrowed=False):
+#         self.title = title
+#         self.author = author
+#         self.year = year
+#         self.is_borrowed = is_borrowed
+#
+#     def borrow(self):
+#         if self.is_borrowed:
+#             raise ValueError("Book is already borrowed")
+#         self.is_borrowed = True
+#
+#     def return_book(self):
+#         if not self.is_borrowed:
+#             raise ValueError("Book was not borrowed")
+#         self.is_borrowed = False
+#
+#     def get_info(self):
+#         return f"Title: {self.title}, Author: {self.author}, Year: {self.year}"
+#
+# class Library:
+#     def __init__(self):
+#         self.books = []
+#
+#     def add_book(self, book):
+#         self.books.append(book)
+#
+#     def remove_book(self, title):
+#         for book in self.books:
+#             if book.title == title:
+#                 self.books.remove(book)
+#                 return
+#         raise ValueError("Book not found in library")
+#
+#     def find_book(self, title):
+#         for book in self.books:
+#             if book.title == title:
+#                 return book
+#         return None
+#
+#     def get_available_books(self):
+#         available = []
+#         for book in self.books:
+#             if not book.is_borrowed:
+#                 available.append(book)
+#         return available
+#
+#
+# class DigitalBook(Book):
+#     def __init__(self, title, author, year, file_size, file_format, is_borrowed=False):
+#         super().__init__(title, author, year, is_borrowed)
+#         self.file_size = file_size      # במגה־בייט
+#         self.file_format = file_format  # PDF, EPUB וכו'
+#
+#     def download_time(self, speed):
+#         if speed <= 0:
+#             raise ValueError("Speed must be positive")
+#
+#         time = self.file_size / speed
+#         return f"Estimated download time: {time:.2f} seconds"
+# d = DigitalBook("Python Guide", "Guido", 2020, 50, "PDF")
+#
+# print(d.get_info())
+# print(d.download_time(10))   # 5.00 seconds
