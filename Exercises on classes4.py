@@ -202,3 +202,35 @@
 #
 # print(d.get_info())
 # print(d.download_time(10))   # 5.00 seconds
+################################################
+#7
+# class TodoList:
+#     def __init__(self):
+#         self.tasks = []
+#
+#     def add_task(self, task):
+#         self.tasks.append(task)
+#
+#     def remove_task(self, task):
+#         for t in self.tasks:
+#             if t == task:
+#                 self.tasks.remove(t)
+#                 return
+#         raise ValueError("Task not found")
+#
+#     def has_task(self, task):
+#         for t in self.tasks:
+#             if t == task:
+#                 return True
+#         return False
+#
+#     def count(self):
+#         return len(self.tasks)
+#
+#     def get_all(self):
+#         return self.tasks
+
+
+
+
+
