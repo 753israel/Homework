@@ -87,7 +87,85 @@
 #     for line in text:
 #         if line.startswith("Python"):
 #             print(line, end="")
+#
+# def count_uniq(s):
+#     s = s.replace(" ", "").lower()   # מנקה רווחים ומתעלם מאותיות גדולות
+#     word_list = {}
+#     for char in s:
+#         if char in word_list:        # אם התו כבר הופיע
+#             word_list[char] += 1
+#         else:                        # אם זו הפעם הראשונה
+#             word_list[char] = 1
+#     return word_list
+#שאלה 7 — ספירת תווים ללא רווחים
+#כתוב פונקציה שמקבלת מחרוזת ומחזירה מילון שבו כל תו (חוץ מרווח) הוא מפתח
+# , והערך הוא מספר הפעמים שהוא הופיע.
+# def string_uniq(st):
+#     st = st.replace(" ","")
+#     word_list = {}
+#     for char in st:
+#         if char in word_list:
+#             word_list[char] += 1
+#         else:
+#             word_list[char] = 1
+#     return word_list
+#
+#
+#
+#
+# word = input("enter a word:")
+#
+# print(string_uniq(word))
+#
+#שאלה 8 — סינון מילים ארוכות
+#קבל רשימת מילים והחזר רשימה חדשה שמכילה רק מילים שאורכן גדול מ־4 תווים.
+# word = ["cat", "apple", "dog", "banana", "tree"]
+# n_word = []
+# for new_word in word:
+#     if len(new_word) > 4:
+#         n_word.append(new_word)
+# print(n_word)
+#
+#שאלה 9 — סכום מספרים זוגיים
+#כתוב פונקציה שמקבלת רשימת מספרים ומחזירה את סכום כל המספרים הזוגיים בלבד.
+# def sum_even(lis_num):
+#     result = 0
+#     for i in lis_num:
+#         if i % 2 == 0:
+#             result += i
+#     return result
+#
+# num = [1, 4, 7, 2, 10, 5]
+# print(sum_even(num))
+#
+#שאלה 4 — מיזוג שתי רשימות
+#כתוב פונקציה שמקבלת שתי רשימות
+# ומחזירה רשימה חדשה שמכילה את כל האיברים של שתיהן, ללא כפילויות.
 
-
-
-
+# def fix(lis_num1,lis_num2):
+#     lis_new = []
+#     for i in lis_num1:
+#         if i not in lis_new:
+#             lis_new.append(i)
+#     for j in lis_num2:
+#         if j not in lis_new:
+#             lis_new.append(j)
+#     return lis_new
+#
+# num1 = [1, 2, 3]
+# num2 = [3, 4, 5]
+# print(fix(num1,num2))
+#דרך שניה
+# def fix(lis_num1, lis_num2):
+#     lis = []
+#     lis += lis_num1 + lis_num2  # מאחד לרשימה אחת
+#     s = set(lis)                # הופך ל-set כדי להוריד כפילויות
+#     lis = s                     # משנה את שם המשתנה (מיותר)
+#     lis1 = list(lis)            # מחזיר לרשימה
+#     return lis1
+#
+#
+#
+# num1 = [1,2,3]
+# num2 = [3,4,5]
+# print(fix(num1,num2))
