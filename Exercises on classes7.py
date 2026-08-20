@@ -91,3 +91,71 @@
 #
 # larger_rect = s1.big(s2)
 # print("The larger rectangle's area is:", larger_rect.area())
+
+#כתוב סימולציה: יש רשימת אנשים, כל אחד מיוצג כ־dict עם שם וגיל.
+#צור רשימה חדשה שמכילה רק את האנשים מעל גיל 18.
+# people = [
+#     {"name": "Avi", "age": 17},
+#     {"name": "Dana", "age": 22},
+#     {"name": "Ron", "age": 30}
+# ]
+# dic = []
+# for i in people:
+#     if i["age"] > 18:
+#         dic.append(i)
+# print(dic)
+
+#10. כתוב מחלקה בשם Library:
+#יש לה רשימת ספרים
+#כל ספר הוא אובייקט עם שם ומחבר
+#הוסף פעולות:
+#הוספת ספר
+#מחיקת ספר לפי שם
+#חיפוש ספר לפי מחבר
+#ספירת כמות הספרים בספרייה
+# class Book:
+#     def __init__(self, title, author):
+#         self.title = title
+#         self.author = author
+#
+#
+# class Library:
+#     def __init__(self):
+#         self.books = []  # רשימת ספרים
+#
+#     def add_book(self, title, author):
+#         # יוצר אובייקט ספר חדש ומוסיף אותו לרשימה
+#         b = Book(title, author)
+#         self.books.append(b)
+#
+#     def delete_book(self, title):
+#         # עובר על הספרים ומוחק את הספר שהשם שלו תואם
+#         for book in self.books:
+#             if book.title == title:
+#                 self.books.remove(book)
+#                 break
+#
+#     def find_by_author(self, author):
+#         # מחזיר רשימה של כל הספרים שנכתבו על ידי מחבר מסוים
+#         result = []
+#         for book in self.books:
+#             if book.author == author:
+#                 result.append(book.title)
+#         return result
+#
+#     def count_books(self):
+#         # מחזיר את כמות הספרים בספרייה בעזרת len
+#         return len(self.books)
+#
+#
+# # בדיקה:
+# lib = Library()
+# lib.add_book("Python 101", "John Doe")
+# lib.add_book("Advanced Python", "Jane Smith")
+# lib.add_book("Data Science", "John Doe")
+#
+# print("Total books:", lib.count_books())  # ידפיס 3
+# print("Books by John Doe:", lib.find_by_author("John Doe"))
+#
+# lib.delete_book("Python 101")
+# print("Total books after deletion:", lib.count_books())  # ידפיס 2
