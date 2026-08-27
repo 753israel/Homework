@@ -97,24 +97,74 @@
 # l1.turn_off()
 # print(l1.status())
 
-class Speed:
+# class Speed:
+#
+#     def __init__(self, kmh):
+#         self.kmh = kmh
+#
+#     def to_mph(self):
+#         # מחזירים את החישוב מבלי לשנות את המהירות המקורית
+#         return self.kmh / 1.609
+#
+#     def set_speed(self, new_speed):
+#         self.kmh = new_speed
+#
+#
+# # בדיקה
+# s = Speed(160)
+#
+# print(s.to_mph())  # מדפיס בערך 99.44 (160 / 1.609)
+#
+# s.set_speed(100)  # שינוי המהירות ל-100
+# print(s.kmh)  # מדפיס 100
+# print(s.to_mph())  # מדפיס בערך 62.15
 
-    def __init__(self, kmh):
-        self.kmh = kmh
+# class Wallet:
+#     def __init__(self,money):
+#         self.money = money
+#
+#     def add_money(self,amount):
+#         self.money += amount
+#
+#     def spend(self,amount):
+#         if self.money >= amount:
+#             self.money -= amount
+#         else:
+#            print(f'not money is account')
+#     def __str__(self):
+#         return f'{self.money}'
+#
+#
+# w1 = Wallet(100)
+# w1.add_money(10)
+# print(w1)
+# w1.spend(150)
+# print(w1)
 
-    def to_mph(self):
-        # מחזירים את החישוב מבלי לשנות את המהירות המקורית
-        return self.kmh / 1.609
+class Timer:
 
-    def set_speed(self, new_speed):
-        self.kmh = new_speed
+    def __init__(self, seconds=0):
+        self.seconds = seconds
+
+    def add_time(self, sec):
+        self.seconds += sec
+
+    def reset(self):
+        self.seconds = 0
+
+    def show(self):
+        print(f"{self.seconds} seconds")
+
+    def __str__(self):
+        return f"{self.seconds} seconds"
 
 
 # בדיקה
-s = Speed(160)
+t1 = Timer(100)
+t1.show()  # מדפיס: 100 seconds
 
-print(s.to_mph())  # מדפיס בערך 99.44 (160 / 1.609)
+t1.reset()
+t1.show()  # מדפיס: 0 seconds
 
-s.set_speed(100)  # שינוי המהירות ל-100
-print(s.kmh)  # מדפיס 100
-print(s.to_mph())  # מדפיס בערך 62.15
+t1.add_time(150)
+t1.show()  # מדפיס: 150 seconds
